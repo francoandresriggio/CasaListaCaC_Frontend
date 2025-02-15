@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/img/favicon/casaLista.ico" type="image/x-icon">
+    <title>Casa Lista</title>
+    <link rel="stylesheet" href="static/css/general.css">
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+</head>
+
+<body>
+    <main>
+        <div id="titulo">
+            <h2>¿Qué profesional estás buscando?</h2>
+        </div>
+        <section class="especialidad">
+            <div class="especialidad-opcion" onclick="validarLogin('Electricista')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/electricista.png"
+                    alt="electricista">
+                <h3>Electricista</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Gasista')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/gasista.png" alt="gasista">
+                <h3>Gasista</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Plomero')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/plomero.png" alt="plomero">
+                <h3>Plomero</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Carpintero')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/carpintero.png" alt="carpintero">
+                <h3>Carpintero</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Jardinero')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/jardinero.png" alt="jardinero">
+                <h3>Jardinero</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Cerrajero')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/cerrajero.png" alt="cerrajero">
+                <h3>Cerrajero</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Aire acondicionado')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/aire_acondicionado.png"
+                    alt="aire acondicionado">
+                <h3>Aire acondicionado</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Pintor')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/pintor.png" alt="pintor">
+                <h3>Pintor</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Albañil')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/albanil.png" alt="albañil">
+                <h3>Albañil</h3>
+            </div>
+            <div class="especialidad-opcion" onclick="validarLogin('Fletero')">
+                <img class="especialidad-opcion-imagen" src="static/img/profesiones/fletero.png" alt="fletes">
+                <h3>Flete</h3>
+            </div>
+        </section>
+        <section id="publicidad">
+            <h2 id="acercaDeCasaLista">¿Dónde tenemos cobertura?</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.33125124883!2d-58.515706874814555!3d-34.61575126741337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3d05457fbb%3A0xe160f4fce7f7c017!2sCdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1715728430203!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p class="footer-en-linea" id="TerminosYCondiciones">Términos y condiciones</p>
+            <p class="footer-en-linea" id="FAQ">FAQ</p>
+            <p class="footer-en-linea" id="QuienesSomos">¿Quíenes somos?</p>
+        </div>
+        <p class="copyright">&copy; Copyright 2024</p>
+    </footer>
+    <script src="static/js/headerIndex.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/buscarListadoEspecialistas.js"></script>
+    <script src="static/js/footer.js"></script>
+</body>
+
+</html>

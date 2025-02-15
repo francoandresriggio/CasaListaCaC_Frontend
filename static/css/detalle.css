@@ -1,0 +1,253 @@
+:root {
+    --color-primario-verde: #9fd0a1;
+    --color-primario-verde-opacidad: rgba(180, 217, 182, 0.5);
+    --color-primario-azul: #356194;
+    --color-secundario-naranja: #EB7C00;
+    --color-secundario-naranajaDos: #C6A785;
+    --color-fondo: #E9F5DB;
+}
+
+main {
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 12vh;
+}
+
+main a {
+    margin: 5%;
+    width: 30%;
+    font-size: 5vh;
+}
+
+
+.fila1 {
+    margin-left: 6%;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 90%;
+    justify-content: space-between;
+    max-width: 75%;
+    height: auto;
+}
+
+
+.foto {
+    margin: 0;
+    margin-top: 4%;
+    margin-left: 1%;
+    border-radius: 30%;
+    width: 240px;
+    height: auto;
+
+}
+
+.medio {
+    margin-left: 15%;
+    white-space: pre;
+
+}
+
+.derecha {
+    font-size: 3vh;
+    margin-left: 5%;
+    margin-top: 2%;
+    white-space: pre;
+}
+
+.fila2 {
+    max-width: 85%;
+    height: auto;
+    margin: 0;
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+    background-color: rgb(218, 210, 210);
+    border-radius: 10px;
+    padding: 1%;
+    padding-top: 0.5%;
+}
+
+main h4 {
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+main p {
+    margin: 2%;
+}
+
+.fila3 {
+    margin-top: 2%;
+    margin-right: 3%;
+    text-align: right;
+}
+
+.boton {
+    width: 30%;
+    background-color: #308df8;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    transition-property: background-color, border, color;
+    border-radius: 10px;
+    border: solid #B6DAB8;
+}
+
+.boton:hover {
+    background-color: white;
+    border: double #308df8;
+    color: #308df8;
+    cursor: pointer;
+}
+
+.opiniones {
+    margin: 2%;
+    max-width: 85%;
+    background-color: rgb(224, 221, 221);
+    border-radius: 15px;
+    border: 2px solid #E9F5DB;
+    padding: 1%;
+
+}
+
+.comentarista {
+    margin: 0.5%;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .foto {
+        margin: 0;
+        margin-top: 15%;
+        margin-left: 10%;
+        border-radius: 30%;
+        width: 130px;
+        height: auto;
+        border: double var(--color-fondo);
+    }
+
+    .derecha {
+        margin-left: 20%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:426px) {
+    main {
+        margin-top: 15vh;
+    }
+
+    .fila1 {
+        margin-left: 6%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 44% 20% 10%;
+        justify-content: space-between;
+        height: 80vh;
+
+    }
+
+    .foto {
+        margin: 0;
+        margin-top: 20%;
+        margin-left: 25%;
+        border-radius: 30%;
+        width: 200px;
+        height: auto;
+        border: double var(--color-fondo);
+    }
+
+    .medio {
+        text-align: center;
+        font-size: 3vh;
+        margin-top: 2vh;
+        margin-left: -15%;
+    }
+
+    .derecha {
+        text-align: center;
+        margin-left: -5%;
+        white-space: pre;
+    }
+
+    .fila2 {
+        margin-top: 0%;
+    }
+
+    .fila3 {
+        margin-top: 0%;
+        text-align: center;
+    }
+
+    .boton {
+        margin: 2.5%;
+        padding: 2%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .fila1 {
+        grid-template-rows: 40% 15% 15%;
+        padding: 0%;
+        margin: 0;
+    }
+
+    .foto {
+        margin-left: 23%;
+    }
+
+    .medio {
+        margin-top: 6vh;
+    }
+
+    .derecha {
+        margin-top: 25%;
+        white-space: pre;
+    }
+
+    .derecha p {
+        margin-top: 0%;
+        font-size: 3vh;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .fila1 {
+        max-width: 100%;
+        height: 90vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 45% 10% 15%;
+    }
+
+    .foto {
+        margin-left: 18%;
+    }
+
+    .medio {
+        text-align: center;
+        margin-top: 0;
+        margin-left: -30%;
+    }
+
+    .derecha {
+        margin-left: -30%;
+        margin-top: 10vh;
+        white-space: pre;
+    }
+
+    .derecha p {
+        font-size: 3vh;
+    }
+}

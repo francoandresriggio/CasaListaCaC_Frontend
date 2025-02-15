@@ -1,0 +1,231 @@
+:root {
+    --color-primario-verde: #9fd0a1;
+    --color-primario-verde-opacidad: rgba(180, 217, 182, 0.5);
+    --color-primario-azul: #356194;
+    --color-secundario-naranja: #EB7C00;
+    --color-secundario-naranajaDos: #C6A785;
+    --color-fondo: #E9F5DB;
+}
+
+main {
+    margin-top: 20vh;
+    margin-bottom: 15vh;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: -5vh;
+}
+
+.cajas {
+    margin-top: 3%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: left;
+    align-content: space-between;
+}
+
+.pedido {
+    border-radius: 15px;
+    max-width: 15%;
+    min-width: 10%;
+    height: auto;
+    padding: 0%;
+    padding-right: 4%;
+    flex: 1 1 200px;
+    background-color: rgb(206, 204, 204);
+    transition: 1s;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+
+}
+
+.pedido:hover {
+    border: outset var(--color-primario-verde-opacidad);
+    box-shadow: 0px 0px 40px rgb(45, 182, 45);
+}
+
+
+
+
+.pedido:hover .foto {
+    border: outset var(--color-primario-verde-opacidad);
+}
+
+.Cli {
+    font-size: 4vh;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 15%;
+    width: 100%;
+}
+
+
+.foto {
+    border-radius: 20px;
+    border: outset var(--color-primario-azul);
+    max-width: 80%;
+    height: auto;
+    align-items: center;
+    transition: 3s;
+    margin-left: 25%;
+    margin-top: 20%;
+}
+
+.nombre {
+    width: 100%;
+    margin-left: 15%;
+    padding-left: 0%;
+    margin-top: 5%;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.nombre p {
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.boton {
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-bottom: 15%;
+    border: outset var(--color-primario-azul);
+    width: 15vh;
+
+}
+
+.boton:hover {
+    border: outset var(--color-primario-verde-opacidad);
+    color: var(--color-primario-verde-opacidad);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 769px) {
+    .pedido {
+        border-radius: 15px;
+        max-width: 12%;
+        min-width: 10%;
+        height: auto;
+        padding: 2%;
+        padding-right: 12%;
+    }
+
+
+    .foto {
+        border-radius: 10px;
+        min-width: 95px;
+        height: auto;
+        align-items: center;
+        margin-left: 35%;
+    }
+
+    .nombre{
+        margin-left: 40%;
+        text-align: center;
+    }
+
+    .Cli {
+        margin-left: 40%;
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    .boton {
+        margin-top: 5%;
+        border: outset var(--color-primario-azul);
+        margin-left: 50%;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .cajas {
+        gap: 1px;
+    }
+
+    .pedido {
+        border-radius: 15px;
+        max-width: 10%;
+        height: auto;
+        padding: 5%;
+        padding-right: 32%;
+    }
+
+    .Cli{
+        margin-left: 100%;
+    }
+
+    .foto {
+        margin-left: 50%;
+    }
+
+    .nombre{
+        width: 100%;
+        text-align: center;
+        margin-left: 70%;
+        font-size: 2.5vh;
+    }
+
+    .boton {
+        max-width: 80px;
+        margin-left: 90%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .pedido {
+        border-radius: 15px;
+        max-width: 10%;
+        height: auto;
+        padding: 4%;
+        padding-right: 35%;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .cajas {
+        gap: 10px;
+    }
+
+    .pedido {
+        padding-right: 39%;
+        max-width: 30%;
+    }
+
+    .Cli{
+        margin-left: 50%;
+    }
+
+    .foto {
+        max-width: 100%;
+        margin: 0%;
+        margin-left: 50%;
+    }
+
+    .nombre {
+        width: 100%;
+        margin-left: 50%;
+    }
+
+    .nombre p{
+        word-wrap: break-word;
+        white-space:normal;
+    }
+
+    #telefonoCliente{
+        margin-left: 0%;
+    }
+
+    .boton{
+        margin-left: 60%;
+    }
+
+}

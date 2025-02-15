@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="shortcut icon" href="../static/img/favicon/casaLista.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/general.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/servicios.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+</head>
+
+<body>
+    <main>
+        <section id="especialistas">
+            <h2>Especialistas</h2>
+            <div class="filtroEspecialistas">
+                <p id="filtroTitulo">Filtrar por:</p>
+                <form id="filtrarBusqueda">
+                    <div class="filtroOpcion">
+                        <label for="zona"></label>
+                        <input class="filtroColor" type="text" name="zona" id="zona" placeholder="Zona de trabajo">
+                    </div>
+                    <div class="filtroOpcion">
+                        <label for="valoracion"></label>
+                        <input class="filtroColor" type="number" name="valoracion" id="valoracion" min="1" max="5"
+                            placeholder="Valoración mínima">
+                    </div>
+                    <div>
+                        <button class="filtroOpcion" type="submit">Filtrar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div>
+            <p class="footer-en-linea" id="TerminosYCondiciones">Términos y condiciones</p>
+            <p class="footer-en-linea" id="FAQ">FAQ</p>
+            <p class="footer-en-linea" id="QuienesSomos">¿Quíenes somos?</p>
+        </div>
+        <p class="copyright">&copy; Copyright 2024</p>
+    </footer>
+    <script src="../static/js/validacionPostLogin.js"></script>
+    <script src="../static/js/headerLogueado.js"></script>
+    <script src="../static/js/servicios.js"></script>
+    <script src="../static/js/footer.js"></script>
+</body>
+
+</html>

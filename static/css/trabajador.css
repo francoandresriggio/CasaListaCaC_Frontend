@@ -1,0 +1,209 @@
+main {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 90%;
+    height: auto;
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 12vh;
+}
+
+.en-linea {
+    margin: 0;
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-template-rows: 100%;
+    justify-self: center;
+    width: auto;
+    height: auto;
+
+}
+
+.imagenes {
+    margin: 15%;
+    width: 240px;
+    height: 80%;
+}
+
+.foto {
+    margin: 10%;
+    margin-left: 15%;
+    max-width: 100%;
+    height: auto;
+}
+
+.derecha {
+    margin-left: 15%;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3%;
+    white-space: pre;
+}
+
+.booton {
+    width: 30%;
+    height: 5vh;
+}
+
+.boton {
+    width: 70%;
+    background-color: #308df8;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    transition-property: background-color, border, color;
+    border-radius: 10px;
+    border: solid #B6DAB8;
+
+}
+
+.boton:hover {
+    background-color: white;
+    border: double #308df8;
+    color: #308df8;
+    cursor: pointer;
+}
+
+.star {
+    margin-left: 1%;
+    font-size: 5vh;
+    color: gray;
+    transition: color 0.3s;
+    cursor: pointer;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.amabilidad {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: left;
+    white-space: normal;
+}
+
+.puntualidad {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: left;
+    white-space: normal;
+}
+
+.proligidad {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: left;
+    white-space: normal;
+}
+
+.confiabilidad {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: left;
+    white-space: normal;
+}
+
+.star:hover {
+    color: #C6A785;
+}
+
+.star:hover~.star {
+    color: #C6A785;
+}
+
+input[type="radio"]:checked~.star {
+    color: #EB7C00;
+}
+
+@media screen and (max-width: 769px) {
+
+    .foto {
+        margin-left: 0;
+    }
+
+    .booton {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:426px) {
+    main {
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+        margin-right: 0;
+        margin-left: 0;
+
+    }
+
+    main h3 {
+        font-size: 4vh
+    }
+
+
+    .en-linea {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 90%;
+        grid-template-rows: 35% 60%;
+        justify-self: center;
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    .imagenes {
+        margin: 0;
+        margin-bottom: 0%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .foto {
+        margin: 20%;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .derecha {
+        margin-left: 20%;
+        margin-top: 0;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 3%;
+    }
+
+    .booton {
+        width: 70%;
+    }
+
+
+}
+
+@media screen and (max-width: 376px) {
+    .star {
+        font-size: 4vh;
+
+    }
+
+    .foto {
+        margin-left: 5%;
+    }
+
+    .comentario {
+        max-width: 10%;
+    }
+
+    textarea{
+        width: 80%;
+    }
+}

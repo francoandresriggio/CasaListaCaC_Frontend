@@ -1,0 +1,107 @@
+body {
+    margin-top: 5%;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(240, 244, 240);
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
+}
+
+.detalle-perfil, .specialties-form {
+    margin-bottom: 20px;
+}
+
+ h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+main div {
+    margin-top: 15px;
+}
+
+main label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.imagen{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
+    margin: auto;
+    display: block;
+}
+
+main input[type="text"],
+main input[type="email"],
+main input[type="tel"],
+main input[type="password"],
+main input[type="file"] { 
+    width: calc(100% - 20px);
+    padding: 5px;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+main button {
+    padding: 5px 15px;
+    background-color: rgb(9, 148, 9);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+main{
+    margin-bottom: 15vh;
+}
+
+.habilitarEspecialidad{
+    display: inline;
+}
+
+#habilitarEspecialidad{
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: green;
+}
+.editar-foto-container {
+    justify-content: center;
+    margin-top: 10px; /* Ajusta el margen según sea necesario */
+}
+.editar{
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Query para botones en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    button {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .imagen {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 376px){
+    #habilitarEspecialidad{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,156 @@
+main {
+    margin-top: 20vh;
+    margin-bottom: 15vh;
+}
+
+.en-linea {
+    max-width: 70%;
+    height: 15%;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+    margin-top: 1.5%;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-template-rows: 100%;
+    border-radius: 30px;
+    transition: 1s;
+    background-color: rgb(221, 216, 216);
+}
+
+
+
+main div {
+    margin-left: 4%;
+}
+
+.foto {
+    margin: 5%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 30%;
+    border: outset #356194;
+}
+
+.en-linea:hover .foto {
+    border: outset #B6DAB8;
+}
+
+.derecha {
+    max-width: 100%;
+    height: auto;
+    font-size: 3vh;
+    text-align: left;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 5vh;
+
+}
+
+main h3 {
+    margin-top: 10%;
+}
+
+main p {
+    margin-top: 5%;
+}
+
+
+
+.boton {
+    max-width: 100%;
+    background-color: rgb(221, 216, 216);
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    border-radius: 10px;
+    border: double white;
+    cursor: pointer;
+
+}
+
+.boton:hover {
+    border: ridge rgba(180, 217, 182, 0.5);
+    color: rgba(141, 189, 142, 0.5);
+}
+
+@media screen and (max-width: 769px) {
+    .derecha {
+        font-size: 2vh;
+    }
+
+}
+
+
+@media screen and (max-width:426px) {
+    .en-linea {
+        margin-top: 2%;
+        padding: 0;
+        max-width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 100%;
+    }
+
+    main div {
+        margin-left: 5%;
+    }
+
+    main h3 {
+        white-space: pre;
+    }
+
+    .foto {
+        margin-left: 10%;
+        margin-right: 0;
+        margin-top: 25%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 30%;
+    }
+
+    .derecha {
+        margin-left: 18%;
+    }
+
+}
+
+@media screen and (max-width:376px) {
+    .en-linea {
+        max-width: 95%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 30% 50%;
+        grid-template-rows: 100%;
+    }
+
+    .foto {
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .en-linea {
+        min-width: 97%;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 50%;
+    }
+
+    .foto {
+        margin: 0%;
+        margin-top: 40%;
+    }
+
+    .derecha p{
+        width: 100%;
+        word-wrap: break-word;
+        white-space:normal;
+    }
+
+}

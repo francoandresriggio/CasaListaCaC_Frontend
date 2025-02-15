@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/favicon/casaLista.ico" type="image/x-icon">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="../static/css/general.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/registro.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+</head>
+
+<body>
+    <main>
+        <h1>Registro de Usuario</h1>
+        <section class="container">
+            <h2>Alta usuario</h2>
+            <form id="altaUsuario" onsubmit="return validarDatos()">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input size="30" type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required>
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input size="30" type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required>
+                </div>
+                <div>
+                    <label for="mail">Correo Electrónico:</label>
+                    <input type="email" id="mail" name="mail" required>
+                </div>
+                <div>
+                    <label for="zona">Seleccione barrio:</label>
+                    <select name="zona" id="zona" required>
+                        <option value="" disabled>Elegir...</option>
+                        <option value="Agronomía">Agronomía</option>
+                        <option value="Almagro">Almagro</option>
+                        <option value="Balvanera">Balvanera</option>
+                        <option value="Barracas">Barracas</option>
+                        <option value="Belgrano">Belgrano</option>
+                        <option value="Boedo">Boedo</option>
+                        <option value="Caballito">Caballito</option>
+                        <option value="Chacarita">Chacarita</option>
+                        <option value="Coghlan">Coghlan</option>
+                        <option value="Colegiales">Colegiales</option>
+                        <option value="Constitución">Constitución</option>
+                        <option value="Flores">Flores</option>
+                        <option value="Floresta">Floresta</option>
+                        <option value="La Boca">La Boca</option>
+                        <option value="La Paternal">La Paternal</option>
+                        <option value="Liniers">Liniers</option>
+                        <option value="Mataderos">Mataderos</option>
+                        <option value="Monte Castro">Monte Castro</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Nueva Pompeya">Nueva Pompeya</option>
+                        <option value="Nuñez">Nuñez</option>
+                        <option value="Palermo">Palermo</option>
+                        <option value="Parque Avellaneda">Parque Avellaneda</option>
+                        <option value="Parque Chacabuco">Parque Chacabuco</option>
+                        <option value="Parque Chas">Parque Chas</option>
+                        <option value="Parque Patricios">Parque Patricios</option>
+                        <option value="Puerto Madero">Puerto Madero</option>
+                        <option value="Recoleta">Recoleta</option>
+                        <option value="Retiro">Retiro</option>
+                        <option value="Saavedra">Saavedra</option>
+                        <option value="San Cristóbal">San Cristóbal</option>
+                        <option value="San Nicolás">San Nicolás</option>
+                        <option value="San Telmo">San Telmo</option>
+                        <option value="Versalles">Versalles</option>
+                        <option value="Villa Crespo">Villa Crespo</option>
+                        <option value="Villa Devoto">Villa Devoto</option>
+                        <option value="Villa General Mitre">Villa General Mitre</option>
+                        <option value="Villa Lugano">Villa Lugano</option>
+                        <option value="Villa Luro">Villa Luro</option>
+                        <option value="Villa Ortúzar">Villa Ortúzar</option>
+                        <option value="Villa Pueyrredón">Villa Pueyrredón</option>
+                        <option value="Villa Real">Villa Real</option>
+                        <option value="Villa Riachuelo">Villa Riachuelo</option>
+                        <option value="Villa Santa Rita">Villa Santa Rita</option>
+                        <option value="Villa Soldati">Villa Soldati</option>
+                        <option value="Villa Urquiza">Villa Urquiza</option>
+                        <option value="Villa del Parque">Villa del Parque</option>
+                        <option value="Vélez Sarsfield">Vélez Sarsfield</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="telefono" required>
+                </div>
+
+                <div>
+                    <label for="genero">Seleccine género</label>
+                    <select name="genero" id="genero" required>
+                        <option value="" disabled>Elegir...</option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="imagen">Imagen de perfil:</label>
+                    <input type="text" id="imagen" name="imagen" required>
+                </div>
+                <div>
+                    <div>
+                        <input class="AceptarTerminosYCondiciones" type="checkbox" name="terminos" id="terms"
+                            value="terms" required>
+                        <label class="AceptarTerminosYCondiciones" for="terms">Acepto términos y condiciones</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required minlength="8">
+                </div>
+                <div>
+                    <label for="repetir_contrasena">Repetir Contraseña:</label>
+                    <input type="password" id="repetir_contrasena" name="repetir_contrasena" required minlength="8">
+                </div>
+                <div id="campos"></div>
+                <div>
+
+                    <button type="submit">Crear Usuario</button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p class="footer-en-linea" id="TerminosYCondiciones">Términos y condiciones</p>
+            <p class="footer-en-linea" id="FAQ">FAQ</p>
+            <p class="footer-en-linea" id="QuienesSomos">¿Quíenes somos?</p>
+        </div>
+        <p class="copyright">&copy; Copyright 2024</p>
+    </footer>
+
+    <script src="../static/js/headerLogueado.js"></script>
+    <script src="../static/js/registro.js"></script>
+    <script src="../static/js/footer.js"></script>
+</body>
+
+</html>
