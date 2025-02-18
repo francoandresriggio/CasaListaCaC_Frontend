@@ -62,7 +62,13 @@ document.getElementById("altaUsuario").addEventListener('submit', function (even
         .then(response => response.json())
         .then(data => {
             if(data.existe){
-                alert("Lo siento, ya existe un usuario con el mail especificado")
+                Swal.fire({
+                    title: "Error de correo",
+                    text: "Lo siento, ya existe un usuario con el mail especificado",
+                    icon: "error",
+                    background: "#E9F5DB",
+                    confirmButtonText: "Confirmar"
+                });
             }
             else{
                 let usuarioNuevo = {
@@ -94,7 +100,7 @@ document.getElementById("altaUsuario").addEventListener('submit', function (even
     
                 )
                 .catch(err => {
-                    alert("Error al grabar" )
+                    alert("Error al grabar")
                     console.error(err);
                 })
             }

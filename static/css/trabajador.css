@@ -18,6 +18,7 @@ main h2 {
     display: grid;
     grid-template-columns: 40% 50%;
     grid-template-rows: 100%;
+    column-gap: 60px;
     justify-self: center;
     width: auto;
     height: auto;
@@ -196,7 +197,7 @@ input[type="radio"]:checked~.star {
     }
 
     .foto {
-        margin-left: 5%;
+        margin-left: 15%;
     }
 
     .comentario {

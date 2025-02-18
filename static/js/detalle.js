@@ -87,11 +87,19 @@ const confirmarPedido = idEspecialista => {
 
     fetch(url, options)
                 .then(function(){
-                    alert("Pedido confirmado")
-                    window.location.replace("servicios.html")
+                    Swal.fire({
+                        title: "Pedido confirmado",
+                        confirmButtonText: "Aceptar",
+                        background: "#E9F5DB",
+                        icon: "success"
+                      }).then((result) =>{
+                        if(result.isConfirmed){
+                            window.location.replace("servicios.html")
+                        }
+                    })
                 })
                 .catch(err => {
-                    alert("Error al grabar" )
+                    alert("Error al grabar")
                     console.error(err);
                 })
 }

@@ -36,7 +36,13 @@ const obtenerHistorial = function(){
     .then(response => response.json())
     .then(data => {
         if(data.length == 0){
-            alert("No hay pedidos sin evaluar")
+            Swal.fire({
+                title: "Sin pedidos sin evaluar",
+                text: "No hay pedidos sin evaluar",
+                icon: "info",
+                background: "#E9F5DB",
+                confirmButtonText: "Confirmar"
+            });
         }
         else{
             mostrarHistorialEspecialistas(data)

@@ -101,9 +101,18 @@ const eliminarHistorial = function(){
     }
     fetch(url, options)
     .then(function(){
-        alert("Su calificación ha sido enviada. ¡Muchas gracias!")
-        sessionStorage.removeItem("historialEspecialistaDetalle")
-        window.location.replace("historial.html")
+        Swal.fire({
+            title: "Calificación enviada",
+            text: "Su calificación ha sido enviada. ¡Muchas gracias!",
+            confirmButtonText: "Aceptar",
+            background: "#E9F5DB",
+            icon: "success"
+          }).then((result) =>{
+            if(result.isConfirmed){
+                sessionStorage.removeItem("historialEspecialistaDetalle")
+                window.location.replace("historial.html")
+            }
+          });
     })
 }
 
@@ -144,7 +153,14 @@ const enviarCalificacion = function (idProfesional) {
                 })
     }
     else {
-        alert("Disculpe, falta completar alguno de los campos")
+        Swal.fire({
+            title: "Faltan campos",
+            text: "Disculpe, falta completar alguno de los campos",
+            icon: "error",
+            background: "#E9F5DB",
+            confirmButtonColor: "#356194",
+            confirmButtonText: "Aceptar"
+        });
     }
 }
 

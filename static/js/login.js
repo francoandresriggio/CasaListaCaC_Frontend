@@ -22,7 +22,14 @@ document.getElementById("loginUsuario").addEventListener('submit', function (eve
     .then(response => response.json())
     .then(data =>{
         if(data.mensaje === "usuario y/o contraseña no válidos"){
-            alert(data.mensaje)
+            Swal.fire({
+                title: "No valido",
+                text: data.mensaje,
+                icon: "error",
+                background: "#E9F5DB",
+                confirmButtonColor: "#356194",
+                confirmButtonText: "Aceptar"
+            });
         }
         else{
             localStorage.setItem("usuarioLogueado", data.id)

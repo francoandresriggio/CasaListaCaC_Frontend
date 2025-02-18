@@ -25,6 +25,10 @@ footer > div{
     text-align: center;
 }
 
+.tamano-popup pre{
+    word-wrap: break-word;
+}
+
 @media screen and (max-width: 427px){
     footer {
         font-size: 0.8em;

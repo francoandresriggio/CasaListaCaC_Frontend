@@ -125,8 +125,17 @@ const actualizarDatosUsuario = function(perfilUsuario){
     fetch(url, options)
         .then(response => response.json())
         .then(data => {
-            alert(data.mensaje)
-            window.location.replace("../index.html")
+            Swal.fire({
+                title: "Datos actualizados",
+                text: data.mensaje,
+                confirmButtonText: "Aceptar",
+                background: "#E9F5DB",
+                icon: "success"
+              }).then((result) =>{
+                if(result.isConfirmed){
+                    window.location.replace("../index.html")
+                }
+              });
         })
         .catch(err => {
             console.error(err);

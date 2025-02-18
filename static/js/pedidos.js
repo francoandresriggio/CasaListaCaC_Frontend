@@ -37,7 +37,13 @@ const cargarPedidos = function () {
         .then(response => response.json())
         .then(data => {
         if(data.length === 0){
-            alert("No hay pedidos pendientes")
+            Swal.fire({
+                title: "Sin pedidos",
+                confirmButtonText: "Aceptar",
+                text: "No hay pedidos pendientes",
+                background: "#E9F5DB",
+                icon: "info"
+            });
         }
         else{
             mostrarPedidos(data)

@@ -42,12 +42,26 @@ if (localStorage.getItem("usuarioLogueado") === null) {
                 }
                 else {
                     sessionStorage.setItem("FiltradoEspecialistaBuscado", JSON.stringify(JSON.parse(sessionStorage.getItem("listadoEspecialistas"))))
-        
-                    alert("Lo siento, pero no se encontraron especialistas con las especificaciones realizadas")
+
+                    Swal.fire({
+                        title: "Usuario sin loguearse",
+                        text: "Lo siento, pero no se encontraron especialistas con las especificaciones realizadas",
+                        icon: "warning",
+                        background: "#E9F5DB",
+                        confirmButtonColor: "#356194",
+                        confirmButtonText: "Aceptar"
+                    });
                 }
             }
             else {
-                alert("Lo siento, pero debe estar logueado para usar la funcionalidad de búsqueda de especialista")
+                Swal.fire({
+                    title: "Usuario sin loguearse",
+                    text: "Lo siento, pero debe estar logueado para usar la funcionalidad de búsqueda de especialista",
+                    icon: "warning",
+                    background: "#E9F5DB",
+                    confirmButtonColor: "#356194",
+                    confirmButtonText: "Aceptar"
+                });
             }
         })
 }
@@ -127,12 +141,26 @@ else {
                 }
                 else {
                     sessionStorage.setItem("FiltradoEspecialistaBuscado", JSON.stringify(JSON.parse(sessionStorage.getItem("listadoEspecialistas"))))
-        
-                    alert("Lo siento, pero no se encontraron especialistas con las especificaciones realizadas")
+
+                    Swal.fire({
+                        title: "Sin disponibilidad",
+                        text: "Lo siento, pero no se encontraron especialistas con las especificaciones realizadas",
+                        icon: "warning",
+                        background: "#E9F5DB",
+                        confirmButtonColor: "#356194",
+                        confirmButtonText: "Aceptar"
+                    });
                 }
             }
             else {
-                alert("Lo siento, pero debe estar logueado para usar la funcionalidad de búsqueda de especialista")
+                Swal.fire({
+                    title: "Usuario sin loguearse",
+                    text: "Lo siento, pero debe estar logueado para usar la funcionalidad de búsqueda de especialista",
+                    icon: "warning",
+                    background: "#E9F5DB",
+                    confirmButtonColor: "#356194",
+                    confirmButtonText: "Aceptar"
+                });
             }
         })
     }
