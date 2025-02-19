@@ -16,7 +16,7 @@ header a {
     cursor: pointer;
 }
 
-.encabezado-en-linea {
+.menu p {
     display: inline;
     vertical-align: middle;
 }
@@ -61,7 +61,7 @@ header a {
     color: var(--color-primario-azul);
 }
 
-.menu p:hover {
+.menu .encabezado-en-linea:hover {
     text-decoration: underline;
     cursor: pointer;
 }
