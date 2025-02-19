@@ -15,14 +15,72 @@ if (localStorage.getItem("usuarioLogueado") === null) {
         </form>
         <div class="menu" id="login">
             <img class="encabezado-en-linea icono" src="static/img/header/key.png" alt="llave">
-            <a href="templates/login.html"><p class="encabezado-en-linea">Ingresar</p></a>
-            <p class="encabezado-en-linea">/</p>
+            <p class="encabezado-en-linea">Ingresar</p>
+            <p>/</p>
             <a href="templates/registro.html"><p class="encabezado-en-linea">Registrarme</p></a>
         </div>
         </header>
         `
 
         document.body.insertAdjacentHTML('afterbegin', headerContent)
+
+        //Si se hace click en el texto para ingresar, y el usuario no está logueado, solicita que lo haga
+        document.getElementById("login").addEventListener('click', function(){
+            if(localStorage.getItem("usuarioLogueado") === null)
+            {
+                (async () => {
+                    const { value: datos_login } = await Swal.fire({
+                    title: "Loguearse",
+                    html:
+                    'Email: <input type="email" id="swal-input1" class="swal2-input">' +
+                    'Clave: <input type="password" id="swal-input2" class="swal2-input">',
+                    focusConfirm: false,
+                    background: "#E9F5DB",
+                    preConfirm: () => {
+                    return [
+                        document.getElementById('swal-input1').value,
+                        document.getElementById('swal-input2').value
+                    ]
+                    },
+                    confirmButtonColor: "#356194",
+                    confirmButtonText: "Ingresar",
+                    footer: '<a href="templates/registro.html">¿No tienes cuenta? Registrate</a>'
+                    });
+        
+                    let url = "https://francoriggio.pythonanywhere.com/loginUsuario"
+        
+                    let data = {
+                        mail: datos_login[0],
+                        contrasena: datos_login[1]
+                    }
+                    
+                    console.log(data)
+        
+                    let options = {
+                        body: JSON.stringify(data),
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' }
+                    }
+        
+                    fetch(url, options)
+                    .then(response => response.json())
+                    .then(data =>{
+                        if(data.mensaje === "usuario y/o contraseña no válidos"){
+                        Swal.fire({
+                            title: "Usuario incorrecto",
+                            text: "Usuario y/o contraseña no válidos",
+                            background: "#E9F5DB",
+                            icon: "warning"
+                        });
+                        }
+                        else{
+                            localStorage.setItem("usuarioLogueado", data.id)
+                            window.location.reload()
+                        }
+                    })
+                })()
+            }
+        })
 
         document.getElementById("buscadorEspecialidad").addEventListener('submit', function (event) {
             event.preventDefault()
