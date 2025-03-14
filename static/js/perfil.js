@@ -57,7 +57,7 @@ function validarDatos(){
     return true;
 }
 
-const cargarPerfilUsuario = function(idUsuario, imagenNuevaUsuario, mailUsuario, nombreUsuario, apellidoUsuario, fotoUsuario, telefonoUsuario, generoUsuario, zonaUsuario, contrasenaUsuario, repetirContrasenaUsuario, usuarioEspecialidad, descripcionEspecialidad){
+const cargarPerfilUsuario = function(idUsuario, imagenNuevaUsuario, mailUsuario, nombreUsuario, apellidoUsuario, fotoUsuario, telefonoUsuario, generoUsuario, zonaUsuario,usuarioEspecialidad, descripcionEspecialidad){
     let url = "https://francoriggio.pythonanywhere.com/consultaUsuario/" + idUsuario
     return fetch(url)
     .then(response => response.json())
@@ -70,8 +70,6 @@ const cargarPerfilUsuario = function(idUsuario, imagenNuevaUsuario, mailUsuario,
         generoUsuario.value = data.genero
         zonaUsuario.value = data.zona
         telefonoUsuario.value = data.telefono
-        contrasenaUsuario.value = data.contrasena
-        repetirContrasenaUsuario.value = data.contrasena
         if(data.profesion !== null){
             usuarioEspecialidad.value = data.profesion
             descripcionEspecialidad.value = data.descripcion_profesion
@@ -200,7 +198,7 @@ document.getElementById("actualizarDatos").addEventListener('click', function(ev
 let especialidad = null
 let perfilUsuario = null
 
-cargarPerfilUsuario(localStorage.getItem("usuarioLogueado"), imagenNuevaUsuario, mailUsuario, nombreUsuario, apellidoUsuario, fotoUsuario, telefonoUsuario, generoUsuario, zonaUsuario, contrasenaUsuario, repetirContrasenaUsuario, usuarioEspecialidad, descripcionEspecialidad)
+cargarPerfilUsuario(localStorage.getItem("usuarioLogueado"), imagenNuevaUsuario, mailUsuario, nombreUsuario, apellidoUsuario, fotoUsuario, telefonoUsuario, generoUsuario, zonaUsuario, usuarioEspecialidad, descripcionEspecialidad)
 .then(perfilUsuarioCargado => {
     perfilUsuario = perfilUsuarioCargado
     if(perfilUsuarioCargado.profesion === null) {especialidad = false}
