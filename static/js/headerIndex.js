@@ -53,8 +53,6 @@ if (localStorage.getItem("usuarioLogueado") === null) {
                         mail: datos_login[0],
                         contrasena: datos_login[1]
                     }
-                    
-                    console.log(data)
         
                     let options = {
                         body: JSON.stringify(data),
