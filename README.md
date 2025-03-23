@@ -1,19 +1,23 @@
-# Casa Lista
-## ¿Qué es Casa Lista?
-Casa Lista es una aplicación desarrollada por estudiantes del programa Codo a Codo del gobierno de la Ciudad de Buenos Aires 🧑‍💻.
+# Casa Lista  
 
-El objetivo de Casa Lista es ayudarte a encontrar más fácil al profesional que necesitas para tu hogar 🏠, de acuerdo con tu zona y tus expectativas sobre la calidad del servicio brindado 👩‍🏭👷
+## What is Casa Lista?  
+Casa Lista is an application developed by students from the *Codo a Codo* program of the Buenos Aires City Government 🧑‍💻.  
 
-## ¿De qué trata este repositorio?
-Este repositorio comprende la parte Frontend de la aplicación realizada, la cual fue desarrollada en HTML, CSS Y JS.
+The goal of Casa Lista is to help you easily find the right professional for your home 🏠, based on your location and service quality expectations 👩‍🏭👷.  
 
-En esta última versión, la aplicación fue desarrollada utilizando <a href="https://github.com/francoandresriggio/CasaListaCaC_Backend" rel="nofollow noreferrer">Python como backend 🐍.</a>
+## About this repository  
+This repository contains the **Frontend** of the application, which was developed using **HTML, CSS, and JavaScript**.  
 
-## Equipo
-- Eduardo Ojeda
-- Mauro Gabriel Pazos
-- Franco Andres Riggio
-- Silvia Gomez
+In this latest version, the application was built using <a href="https://github.com/francoandresriggio/CasaListaCaC_Backend" rel="nofollow noreferrer">Python as the backend 🐍.</a>  
 
-## Aclaraciones sobre su uso
-- Para permitir el cambio de la foto de perfil de los usuarios, se permitió que coloquen una URL que apunte directamente a la imagen que se va a utilizar.
+## Team  
+- Eduardo Ojeda  
+- Mauro Gabriel Pazos  
+- Franco Andres Riggio  
+- Silvia Gomez  
+
+## Usage notes  
+- To allow users to change their profile picture, they must provide a URL that directly links to the image they want to use.  
+
+> 🌎 This documentation is available in **English**.  
+> For the Spanish version, check [README_es.md](./README_es.md).  
