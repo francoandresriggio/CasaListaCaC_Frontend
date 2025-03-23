@@ -5,7 +5,7 @@ Casa Lista es una aplicación desarrollada por estudiantes del programa *Codo a 
 El objetivo de Casa Lista es ayudarte a encontrar más fácil al profesional que necesitas para tu hogar 🏠, de acuerdo con tu zona y tus expectativas sobre la calidad del servicio brindado 👩‍🏭👷
 
 ## ¿De qué trata este repositorio?
-Este repositorio comprende la parte Frontend de la aplicación realizada, la cual fue desarrollada en HTML, CSS Y JS.
+Este repositorio comprende la parte **Frontend** de la aplicación realizada, la cual fue desarrollada en **HTML, CSS y JS**.
 
 En esta última versión, la aplicación fue desarrollada utilizando <a href="https://github.com/francoandresriggio/CasaListaCaC_Backend" rel="nofollow noreferrer">Python como backend 🐍.</a>
 
